@@ -1,0 +1,37 @@
+{
+    "name": "Mutify",
+    "description": "Press Ctrl+Shift+Y to pause video/music tabs",
+    "version": "1.0",
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "browser_action": {
+        "default_popup": "mutify.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://www.youtube.com/*"],
+            "js": ["youtube.js"]
+        }
+    ],
+    "commands": {
+        "toggle-feature": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+Y",
+                "mac": "Command+Shift+Y"
+            },
+            "description": "Send a 'toggle-feature' event to the extension"
+        },
+        "_execute_browser_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+F",
+                "mac": "MacCtrl+Shift+F"
+            }
+        }
+    }
+}
