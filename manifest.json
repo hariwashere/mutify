@@ -11,6 +11,7 @@
         "tabs"
     ],
     "browser_action": {
+        "default_icon": "pausify.png",
         "default_popup": "pausify.html"
     },
     "content_scripts": [
