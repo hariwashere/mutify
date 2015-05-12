@@ -1,4 +1,4 @@
-var mediaState = "paused";
+var mediaState = "play";
 
 var pause = function(tab) {
     chrome.tabs.sendMessage(tab.id, {action: "pause"}, function(response) {
