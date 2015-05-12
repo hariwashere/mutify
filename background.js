@@ -29,7 +29,6 @@ function startMutify() {
     };
     chrome.tabs.query(queryInfo, function(tabs) {
         var tab = tabs[0];
-        console.log(tab.url);
         if(tab.length == 0 ) {
             return;
         }
@@ -38,7 +37,5 @@ function startMutify() {
 }
 
 chrome.commands.onCommand.addListener(function(command) {
-    console.log("Iam here");
     startMutify();
-    console.log('onCommand event received for message: ', command);
 });
