@@ -1,41 +1,43 @@
 var mediaState = "play";
 
-var pause = function(tab) {
-    chrome.tabs.sendMessage(tab.id, {action: "pause"}, function(response) {
-        console.log(response.status);
-        mediaState = "paused";
-        return response.status;
-    });
-}
+var pause = function(tabs) {
+    for(var i=0; i < tabs.length; i++){
+        var tab = tabs[i];
+        chrome.tabs.sendMessage(tab.id, {action: "pause"}, function(response) {
+            response.status;
+        });
+    }
+    mediaState = "paused";
+};
 
-var play = function(tab) {
+var play = function(tabs) {
+    //For now play the last tab
+    var tab = tabs[tabs.length - 1];
     chrome.tabs.sendMessage(tab.id, {action: "play"}, function(response) {
-        console.log(response.status);
-        mediaState = "play";
-        return response.status
+        response.status
     });
-}
+    mediaState = "play";
+};
 
 var stateToActionMap = {
     paused: play,
     play: pause
-}
+};
 
-function startMutify() {
+function startPausify() {
     var queryInfo = {
         url:[
                 '*://www.youtube.com/*'
         ]
     };
     chrome.tabs.query(queryInfo, function(tabs) {
-        var tab = tabs[0];
-        if(tab.length == 0 ) {
+        if(tabs.length == 0 ) {
             return;
         }
-        stateToActionMap[mediaState](tab);
+        stateToActionMap[mediaState](tabs);
     });
-}
+};
 
 chrome.commands.onCommand.addListener(function(command) {
-    startMutify();
+    startPausify();
 });
