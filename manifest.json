@@ -18,6 +18,10 @@
         {
             "matches": ["*://www.youtube.com/*"],
             "js": ["youtube.js"]
+        },
+        {
+            "matches": ["*://www.pandora.com/*"],
+            "js": ["pandora.js"]
         }
     ],
     "commands": {

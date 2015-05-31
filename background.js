@@ -4,7 +4,7 @@ var pause = function(tabs) {
     for(var i=0; i < tabs.length; i++){
         var tab = tabs[i];
         chrome.tabs.sendMessage(tab.id, {action: "pause"}, function(response) {
-            response.status;
+            // response.status;
         });
     }
     mediaState = "paused";
@@ -14,7 +14,7 @@ var play = function(tabs) {
     //For now play the last tab
     var tab = tabs[tabs.length - 1];
     chrome.tabs.sendMessage(tab.id, {action: "play"}, function(response) {
-        response.status
+        // response.status
     });
     mediaState = "play";
 };
@@ -27,7 +27,8 @@ var stateToActionMap = {
 function startPausify() {
     var queryInfo = {
         url:[
-                '*://www.youtube.com/*'
+                '*://www.youtube.com/*',
+                '*://www.pandora.com/*'
         ]
     };
     chrome.tabs.query(queryInfo, function(tabs) {
