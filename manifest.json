@@ -1,7 +1,7 @@
 {
     "name": "Pausify",
     "description": "Press Ctrl+Shift+0 to pause/play video/music tabs",
-    "version": "1.1",
+    "version": "1.2",
     "manifest_version": 2,
     "background": {
         "scripts": ["background.js"],
