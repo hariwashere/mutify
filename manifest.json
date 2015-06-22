@@ -1,7 +1,7 @@
 {
     "name": "Pausify",
     "description": "Press Ctrl+Shift+0 to pause/play video/music tabs",
-    "version": "1.2",
+    "version": "1.3",
     "manifest_version": 2,
     "background": {
         "scripts": ["background.js"],
@@ -22,6 +22,10 @@
         {
             "matches": ["*://www.pandora.com/*"],
             "js": ["pandora.js"]
+        },
+        {
+            "matches": ["*://soundcloud.com/*"],
+            "js": ["soundcloud.js"]
         }
     ],
     "commands": {

@@ -28,7 +28,8 @@ function startPausify() {
     var queryInfo = {
         url:[
                 '*://www.youtube.com/*',
-                '*://www.pandora.com/*'
+                '*://www.pandora.com/*',
+                '*://soundcloud.com/*'
         ]
     };
     chrome.tabs.query(queryInfo, function(tabs) {
