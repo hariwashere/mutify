@@ -1,12 +1,12 @@
 var pauseVideo = function(){
-    if(document.getElementsByClassName("sc-button-play").length > 0)
-        document.getElementsByClassName("sc-button-play")[0].click();
+    if(document.getElementsByClassName("playControl").length > 0)
+        document.getElementsByClassName("playControl")[0].click();
         return "paused";
 };
 
 var playVideo = function(){
-    if (document.getElementsByClassName("sc-button-play").length > 0)
-        document.getElementsByClassName("sc-button-play")[0].click();
+    if (document.getElementsByClassName("playControl").length > 0)
+        document.getElementsByClassName("playControl")[0].click();
         return "play";
 };
 
