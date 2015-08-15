@@ -29,7 +29,8 @@ function startPausify() {
         url:[
                 '*://www.youtube.com/*',
                 '*://www.pandora.com/*',
-                '*://soundcloud.com/*'
+                '*://soundcloud.com/*',
+                '*://play.spotify.com/*'
         ]
     };
     chrome.tabs.query(queryInfo, function(tabs) {
