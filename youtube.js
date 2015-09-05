@@ -1,12 +1,12 @@
 var pauseVideo = function(){
-    if(document.getElementsByClassName("ytp-button-pause").length > 0)
-        document.getElementsByClassName("ytp-button-pause")[0].click();
+    if(document.getElementsByClassName("ytp-play-button").length > 0)
+        document.getElementsByClassName("ytp-play-button")[0].click();
         return "paused";
 };
 
 var playVideo = function(){
-    if (document.getElementsByClassName("ytp-button-play").length > 0)
-        document.getElementsByClassName("ytp-button-play")[0].click();
+    if (document.getElementsByClassName("ytp-play-button").length > 0)
+        document.getElementsByClassName("ytp-play-button")[0].click();
         return "play";
 };
 
