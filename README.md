@@ -1,6 +1,10 @@
 Pausify is a chrome extension that allows you to pause/play videos and music in any browser tab. Supported sites
     - Youtube, Pandora, Soundcloud, Spotify
 
+v1.5:
+    - Added support for Rdio
+    - Supports Youtube's HTML5 player
+
 v1.4:
     - Added support for Spotify
 

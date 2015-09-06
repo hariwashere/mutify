@@ -30,7 +30,8 @@ function startPausify() {
                 '*://www.youtube.com/*',
                 '*://www.pandora.com/*',
                 '*://soundcloud.com/*',
-                '*://play.spotify.com/*'
+                '*://play.spotify.com/*',
+                '*://www.rdio.com/*'
         ]
     };
     chrome.tabs.query(queryInfo, function(tabs) {
